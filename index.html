@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="shortcut icon" href="imgs/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Yummy</title>
+  </head>
+  <body class="bg-dark position-relative">
+    <span class="loader"></span>
+
+    <main>
+      <nav class="side-nav d-flex position-fixed min-vh-100">
+        <div
+          class="left bg-black py-4 px-4 d-flex flex-column justify-content-between"
+        >
+          <ul
+            class="nav-list list-unstyled d-flex flex-column gap-3 mb-5 position-relative overflow-hidden fs-3"
+          >
+            <li class="nav-item text-white position-relative">
+              <a href="#" class="nav-link search-link">Search</a>
+            </li>
+            <li class="nav-item text-white position-relative">
+              <a href="#" class="nav-link category-link">Categories</a>
+            </li>
+            <li class="nav-item text-white position-relative">
+              <a href="#" class="nav-link area-link">Area</a>
+            </li>
+            <li class="nav-item text-white position-relative">
+              <a href="#" class="nav-link ingredients-link">Ingredients</a>
+            </li>
+            <li class="nav-item text-white position-relative">
+              <a href="#" class="nav-link contact-link">Contact Us</a>
+            </li>
+          </ul>
+
+          <div class="icons text-white fs-4">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-solid fa-globe"></i>
+            <p class="text-white fs-4">
+              Copyright Â© 2019 All Rights Reserved.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="right bg-white d-flex flex-column justify-content-between align-items-center py-4 px-3"
+        >
+          <img src="imgs/logo.png" class="logo" alt="Logo" />
+          <i class="fa fa-align-justify fw-bolder fs-3 open-close-btn"></i>
+          <div class="right-footer d-flex flex-column gap-2 fs-4">
+            <i class="fa-solid fa-globe"></i>
+            <i class="fa-solid fa-share-nodes"></i>
+          </div>
+        </div>
+      </nav>
+
+      <section class="home pt-5">
+        <div class="container">
+          <div class="row home-content g-4"></div>
+        </div>
+      </section>
+
+      <section class="search pt-5 d-none">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-md-6">
+              <input
+                type="text"
+                class="form-control bg-transparent name-input search-input text-white"
+                placeholder="Search By Name"
+              />
+            </div>
+            <div class="col-md-6">
+              <input
+                type="text"
+                class="form-control bg-transparent letter-input text-white search-input"
+                placeholder="Search By First Letter"
+                maxlength="1"
+              />
+            </div>
+          </div>
+          <div class="row search-content g-4"></div>
+        </div>
+      </section>
+
+      <section class="categories pt-5 d-none">
+        <div class="container">
+          <div class="row category-content g-4"></div>
+        </div>
+      </section>
+
+      <section class="areas pt-5 d-none">
+        <div class="container">
+          <div class="row area-content g-4"></div>
+        </div>
+      </section>
+
+      <section class="ingredients pt-5 d-none">
+        <div class="container">
+          <div class="row ingredients-content g-4"></div>
+        </div>
+      </section>
+
+      <section
+        class="contact pt-5 d-flex align-items-center justify-content-center vh-100 flex-column d-none"
+      >
+        <div class="container w-50 mb-5">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="mb-3">
+                <input
+                  type="text"
+                  class="form-control user-input"
+                  placeholder="Enter Your Name"
+                />
+              </div>
+              <p class="error-name error-text d-none">
+                Special characters and numbers not allowed
+              </p>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-3">
+                <input
+                  type="email"
+                  class="form-control user-email"
+                  placeholder="Enter Your Email"
+                />
+              </div>
+              <p class="error-email error-text d-none">
+                Email not valid *exemple@yyy.zzz
+              </p>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-3">
+                <input
+                  type="text"
+                  class="form-control user-phone"
+                  placeholder="Enter Your Phone"
+                />
+              </div>
+              <p class="error-phone error-text d-none">
+                Enter valid Phone Number
+              </p>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-3">
+                <input
+                  type="number"
+                  class="form-control user-age"
+                  placeholder="Enter Your Age"
+                />
+              </div>
+              <p class="error-age error-text d-none">Enter valid age</p>
+            </div>
+
+            <div class="col-md-6">
+              <div class="mb-3">
+                <input
+                  type="password"
+                  class="form-control user-pass"
+                  placeholder="Enter Your Password"
+                />
+              </div>
+              <p class="error-pass error-text d-none">
+                Enter valid password *Minimum eight characters, at least one
+                letter and one number
+              </p>
+            </div>
+
+            <div class="col-md-6">
+              <div class="mb-3">
+                <input
+                  type="password"
+                  class="form-control user-re-pass"
+                  placeholder="Re-enter Your Password"
+                />
+              </div>
+              <p class="error-re-pass error-text d-none">
+                Enter valid re-password
+              </p>
+            </div>
+          </div>
+        </div>
+        <button
+          class="btn btn-danger btn-lg fs-3 text-danger bg-transparent"
+          id="submitButton"
+        >
+          Submit
+        </button>
+      </section>
+
+      <section class="meal-description pt-5 d-none">
+        <div class="container">
+          <div class="row gx-3 meal-content"></div>
+        </div>
+      </section>
+
+      <section class="meal-category d-none">
+        <div class="container">
+          <div class="row home-content g-4"></div>
+        </div>
+      </section>
+
+      <section class="areas-meal d-none">
+        <div class="container">
+          <div class="row areas-meal-content g-4"></div>
+        </div>
+      </section>
+
+      <section class="ingredients-meal pt-5 d-none">
+        <div class="container">
+          <div class="row ingredients-meal-content g-4"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
